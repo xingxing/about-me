@@ -16,3 +16,10 @@
 
 (def app
   (handler/site app-routes))
+
+
+(defn -main [port]
+  (let [port-int (Integer. port)]
+    (ring-adpt/run-jetty #'app {:port (or port-int 8080) :join? false})))
+  
+

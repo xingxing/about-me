@@ -1,4 +1,0 @@
-(require 'your-app.core/handler)
-(require 'about-me.core/handler)
-(use 'ring.util.serve)
- (serve about-me.core/handler)
